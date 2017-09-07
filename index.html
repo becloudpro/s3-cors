@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>S3 CORS Configurations Lab</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h1>Hello! Let's try to load some content with AJAX</h1>
+
+    <hr /><!------------------------------>
+
+    <button onclick="$('#same-bucket-content').load('/content.html')">
+        Load from the same bucket
+    </button>
+    <div id="same-bucket-content">
+        ... The content from the same bucket should appear here ...
+    </div>
+
+    <hr /><!------------------------------>
+
+    <button onclick="$('#diff-bucket-content').load('http://BUCKET_NAME.s3-website.BUCKET_REGION.amazonaws.com/content.html')">
+        Load from the different bucket
+    </button>
+    <div id="diff-bucket-content">
+        ... The content from the different bucket should appear here ...
+    </div>
+</body>
+</html>
